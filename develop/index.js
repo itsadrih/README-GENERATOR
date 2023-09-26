@@ -1,7 +1,7 @@
 // DONE: Included packages needed for this application
 
 const inquirer = require('inquirer');
-const { generateMarkdown } = require('./develop/utils/generateMarkdown.js');
+const { generateMarkdown } = require('./utils/generateMarkdown');
 const fs = require('fs');
 
 // DONE: Created an array of questions for user input
@@ -53,14 +53,42 @@ const fs = require('fs');
         {
           type: 'input',
           name: 'contributing',
-          message: 'Are there other contributors in this project?'
+          message: 'Are there other contributors to this project?'
         },
+
+        {
+            type: 'list',
+            name: 'confirmLicenses1',
+            message: 'Would you like to include a license? Please say yes or no.',
+            choices: ['yes', 'no'],
+            when: ({ confirmLicenses }) => !confirmLicenses
+          },
+           
+       {
+        type: 'confirm',
+        name: 'confirmLicenses2',
+        message: 'Would you like to include a license?',
+        default: false
+       },
+
+     
+      {
+        type: 'list',
+        name: 'licenses',
+        message: 'What license would you like to include?',
+        choices: ['MIT', 'CC--0'],
+        when: ({ confirmLicenses, confirmLicenses2 }) =>
+          confirmLicenses || confirmLicenses2 === 'yes'
+      }
 ];
 
+
+  
 // DONE: Created a function to write README file
-function writeToFile(fileName, data) {
+const init = () => {
     return inquirer.prompt(questions);
-}
+  };
+
 const writeToFile = data => {
     fs.writeFile('README.md', data, error => {
       if (error) {
@@ -71,14 +99,6 @@ const writeToFile = data => {
     }); };
   
   
-// DONE: Created a function to initialize app
-
-const init = () => {
-    return inquirer.prompt(questions);
-  };
-  
-
-// Function call to initialize app
 init()
   .then(userInput => {
     return generateMarkdown(userInput);
