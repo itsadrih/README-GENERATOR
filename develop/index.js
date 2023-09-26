@@ -57,7 +57,7 @@ const fs = require('fs');
         },
 ];
 
-// TODO: Create a function to write README file
+// DONE: Created a function to write README file
 function writeToFile(fileName, data) {
     return inquirer.prompt(questions);
 }
@@ -71,7 +71,7 @@ const writeToFile = data => {
     }); };
   
   
-// TODO: Create a function to initialize app
+// DONE: Created a function to initialize app
 
 const init = () => {
     return inquirer.prompt(questions);
