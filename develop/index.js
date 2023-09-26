@@ -53,15 +53,39 @@ const fs = require('fs');
         {
           type: 'input',
           name: 'contributing',
-          message: 'How can others contribute to this project?'
+          message: 'Are there other contributors in this project?'
         },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
+function writeToFile(fileName, data) {
+    return inquirer.prompt(questions);
+}
+const writeToFile = data => {
+    fs.writeFile('README.md', data, error => {
+      if (error) {
+        console.error(error);
+      } else {
+        console.log('README.md file created!');
+      }
+    }); };
+  
+  
 // TODO: Create a function to initialize app
-function init() {}
+
+const init = () => {
+    return inquirer.prompt(questions);
+  };
+  
 
 // Function call to initialize app
-init();
+init()
+  .then(userInput => {
+    return generateMarkdown(userInput);
+  })
+  .then(readmeInfo => {
+    return writeToFile(readmeInfo);
+  })
+  .catch(error => {
+    console.log(error);
+  })
