@@ -37,13 +37,43 @@ function renderLicenseSection(license) {
 }
 
 // DONE: CreateD a function to generate markdown for README
+// DONE:ADDED TABLE OF CONTENTS 
 function generateMarkdown(data) {
 
   return `# ${data.title}
  ${renderLicenseBadge(data.licenses)}
 
-`;
+
+}
+## Table of Contents
+- [Description](#description)
+-[Installation](#installation)
+- [Usage](#usage)
+- [Licenses](#licenses)
+-[Contributing](#contributing)
+- [Questions](#questions)
+
+
+## Description
+${data.description}
+
+## Installation
+${data.installation}
+
+## Usage
+${data.usage}
+
+${renderLicenseSection(data.licenses)}
+
+## Contributing
+${data.contributing}
+
+## Questions
+If you have any questions on this project please feel free to reach out to me.
+GitHub: https://github.com/${data.github}  
+Email: ${data.email}
+`
 }
 
-module.exports = generateMarkdown;
-const fs = require('fs');
+module.exports = {generateMarkdown};
+

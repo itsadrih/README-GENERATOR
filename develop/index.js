@@ -1,7 +1,7 @@
 // DONE: Included packages needed for this application
 
 const inquirer = require('inquirer');
-const { generateMarkdown } = require('./utils/generateMarkdown');
+const{ generateMarkdown } = require('./utils/generateMarkdown');
 const fs = require('fs');
 
 // DONE: Created an array of questions for user input
@@ -56,21 +56,18 @@ const fs = require('fs');
           message: 'Are there other contributors to this project?'
         },
 
-        {
-            type: 'list',
-            name: 'confirmLicenses1',
-            message: 'Would you like to include a license? Please say yes or no.',
-            choices: ['yes', 'no'],
-            when: ({ confirmLicenses }) => !confirmLicenses
-          },
-           
-       {
+        //pasted it here mean while
+     {
         type: 'confirm',
-        name: 'confirmLicenses2',
+        name: 'confirmLicenses',
         message: 'Would you like to include a license?',
-        default: false
+        choices: ['yes', 'no'],
+        when: ({ confirmLicenses }) => !confirmLicenses
        },
 
+        
+     //cut code to test if i found the bug
+     //made 2 1 and 1 2
      
       {
         type: 'list',
