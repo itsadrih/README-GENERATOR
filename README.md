@@ -26,7 +26,7 @@ Go to the terminal and run node index.js. After this please follow the instructi
 MIT
 
 ## Contributing
-no
+No
 
 ## Questions
 If you have any questions on this project please feel free to reach out to me.
@@ -34,8 +34,8 @@ GitHub: https://github.com/itsadrih
 Email: aherreraa08@gmail.com
 
 ## Links 
-demo - https://drive.google.com/file/d/1-3DLQApLnqM6UDtTFYFPuRiHAmLPtjje/view
-repo - https://github.com/itsadrih/README-GENERATOR
+DEMO - https://drive.google.com/file/d/1-3DLQApLnqM6UDtTFYFPuRiHAmLPtjje/view
+REPO - https://github.com/itsadrih/README-GENERATOR
 
 ## Notes
 I had some help with this project. A friend of mine helped.
