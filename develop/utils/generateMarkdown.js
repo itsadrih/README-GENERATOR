@@ -1,4 +1,4 @@
-// DONE: CreateD a function that returns a license badge based on which license is passed in
+// DONE: Created a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (!license) {
@@ -8,7 +8,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-// DONE: Create a function that returns the license link
+// DONE: Created a function that returns the license link
 
 function renderLicenseLink(license) {
   if (license === 'CC--0') {
@@ -21,7 +21,7 @@ function renderLicenseLink(license) {
  
 }
 
-// DONE - If there is no license, return an empty string
+
 // DONE: Created a function that returns the license section of README
 
 
@@ -36,8 +36,9 @@ function renderLicenseSection(license) {
 
 }
 
-// DONE: CreateD a function to generate markdown for README
+// DONE: Created a function to generate markdown for README
 // DONE:ADDED TABLE OF CONTENTS 
+
 function generateMarkdown(data) {
 
   return `# ${data.title}
