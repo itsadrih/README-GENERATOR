@@ -4,12 +4,12 @@
 
 
 ## Table of Contents
-#[Description](#description)
-#[Installation](#installation)
-#[Usage](#usage)
-#[Licenses](#licenses)
-#[Contributing](#contributing)
-#[Questions](#questions)
+*[Description](#description)
+*[Installation](#installation)
+*[Usage](#usage)
+*[Licenses](#licenses)
+*[Contributing](#contributing)
+*[Questions](#questions)
 
 
 ## Description
@@ -35,3 +35,6 @@ Email: aherreraa08@gmail.com
 ## Links 
 demo - https://drive.google.com/file/d/1-3DLQApLnqM6UDtTFYFPuRiHAmLPtjje/view
 repo - https://github.com/itsadrih/README-GENERATOR
+
+## Notes
+I had some help with this project. A friend of mine helped.
