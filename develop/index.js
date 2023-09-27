@@ -56,7 +56,6 @@ const fs = require('fs');
           message: 'Are there other contributors to this project?'
         },
 
-        //pasted it here mean while
      {
         type: 'confirm',
         name: 'confirmLicenses',
@@ -66,8 +65,7 @@ const fs = require('fs');
        },
 
         
-     //cut code to test if i found the bug
-     //made 2 1 and 1 2
+     
      
       {
         type: 'list',
